@@ -5,7 +5,6 @@ A cookbook to manage an installation of [Elixir](http://elixir-lang.org/).
 ## Supported Platforms
 
 * CentOS
-* Ubuntu
 * Amazon Linux 
 
 ## Attributes
