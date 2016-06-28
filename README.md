@@ -6,8 +6,12 @@ A cookbook to manage an installation of [Elixir](http://elixir-lang.org/).
 
 * CentOS
 * Ubuntu
+* Amazon Linux 
 
 ## Attributes
+
+
+*TODO* Reformat for Supermarket.chef.io 
 
 <table>
   <tr>
