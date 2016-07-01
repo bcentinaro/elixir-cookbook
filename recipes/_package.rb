@@ -16,7 +16,7 @@
 elixir_path = File.join(node[:elixir][:_versions_path], node[:elixir][:version])
 
 include_recipe "apt::default"
-include_recipe "erlang::esl"
+include_recipe "erlang::source"
 include_recipe "libarchive"
 
 asset = github_asset "Precompiled.zip" do
