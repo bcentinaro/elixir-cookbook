@@ -20,6 +20,9 @@ directory node[:elixir][:_versions_path] do
   recursive true
 end
 
+node.set[:erlang][:install_method]    = "source"
+include_recipe "erlang::default"
+
 include_recipe "elixir::_#{node[:elixir][:install_method]}"
 
 bin_path    = File.join(node[:elixir][:install_path], "bin")

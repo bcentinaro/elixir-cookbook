@@ -5,18 +5,9 @@
 # Copyright (C) 2013-2015 Jamie Winsor (<jamie@vialstudios.com>)
 #
 
-# case node['platform_family']
-# when 'debian'
-#   node.normal[:apt][:compile_time_update] = true
-#   node.normal[:erlang][:esl][:version] = "1:18.0"
-# when 'rhel'
-#   node.normal[:erlang][:esl][:version] = "18.0-1.el6"
-# end
-
 elixir_path = File.join(node[:elixir][:_versions_path], node[:elixir][:version])
 
 include_recipe "apt::default"
-include_recipe "erlang::source"
 include_recipe "libarchive"
 
 asset = github_asset "Precompiled.zip" do
