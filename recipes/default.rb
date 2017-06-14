@@ -20,8 +20,8 @@ directory node[:elixir][:_versions_path] do
   recursive true
 end
 
-node.set[:erlang][:install_method]    = "source"
-include_recipe "erlang::default"
+include_recipe "erlang::package"
+
 
 include_recipe "elixir::_#{node[:elixir][:install_method]}"
 

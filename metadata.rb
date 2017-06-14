@@ -9,7 +9,7 @@ version          "0.12.1"
 depends "apt", "~> 2.7"
 depends "git"
 depends "github"
-depends "erlang"
+depends "erlang", '~> 5.1.0'
 depends "libarchive"
 depends "validation", ">= 0.2.0"
 
