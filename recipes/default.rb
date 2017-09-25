@@ -20,7 +20,18 @@ directory node[:elixir][:_versions_path] do
   recursive true
 end
 
-include_recipe "erlang::package"
+# node.override['erlang']['esl']['version'] = "19.3"
+# include_recipe "erlang::esl"
+
+remote_file '/tmp/esl-erlang_19.3-1~centos~7_amd64.rpm' do
+  source 'https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_19.3-1~centos~7_amd64.rpm'
+  mode '0755'
+  action :create
+end
+
+package 'esl-erlang' do 
+  source '/tmp/esl-erlang_19.3-1~centos~7_amd64.rpm'
+end
 
 
 include_recipe "elixir::_#{node[:elixir][:install_method]}"
